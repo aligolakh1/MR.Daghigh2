@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>پنل مدیریت مستر دقیق | MR.DAGHIGH CORE</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "primary": "#a43e00",
+            "surface-container-high": "#dce9ff",
+            "on-surface-variant": "#5a4137",
+            "inverse-on-surface": "#eaf1ff",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface-container-highest": "#d3e4fe",
+            "on-secondary-fixed": "#131b2e",
+            "secondary-container": "#dae2fd",
+            "primary-container": "#ff6b1a",
+            "secondary-fixed": "#dae2fd",
+            "outline": "#8e7165",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#591e00",
+            "tertiary-fixed-dim": "#93ccff",
+            "surface-tint": "#a43e00",
+            "background": "#f8f9ff",
+            "on-primary": "#ffffff",
+            "secondary": "#565e74",
+            "primary-fixed-dim": "#ffb596",
+            "tertiary-fixed": "#cce5ff",
+            "primary-fixed": "#ffdbcd",
+            "surface-bright": "#f8f9ff",
+            "on-tertiary-fixed": "#001d31",
+            "on-tertiary-fixed-variant": "#004b73",
+            "on-tertiary-container": "#003452",
+            "surface": "#f8f9ff",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-error-container": "#93000a",
+            "on-background": "#0b1c30",
+            "surface-container-low": "#eff4ff",
+            "surface-variant": "#d3e4fe",
+            "surface-dim": "#cbdbf5",
+            "inverse-surface": "#213145",
+            "on-primary-fixed-variant": "#7d2d00",
+            "surface-container": "#e5eeff",
+            "outline-variant": "#e2bfb2",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-surface": "#0b1c30",
+            "on-primary-fixed": "#360f00",
+            "on-secondary-container": "#5c647a",
+            "inverse-primary": "#ffb596",
+            "tertiary": "#006398",
+            "tertiary-container": "#3da0e5",
+            "surface-container-lowest": "#ffffff"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "margin-md": "2rem",
+            "margin-lg": "3rem",
+            "space-md": "1rem",
+            "gutter-lg": "2rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-md": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "body-md": ["IBM Plex Sans", "Vazirmatn"],
+            "display-lg": ["Space Grotesk", "Vazirmatn"],
+            "label-mono-md": ["JetBrains Mono"],
+            "title-md": ["IBM Plex Sans", "Vazirmatn"],
+            "display-lg-mobile": ["Space Grotesk", "Vazirmatn"],
+            "body-sm": ["IBM Plex Sans", "Vazirmatn"],
+            "headline-lg": ["Space Grotesk", "Vazirmatn"],
+            "headline-lg-mobile": ["Space Grotesk", "Vazirmatn"],
+            "headline-sm": ["Space Grotesk", "Vazirmatn"],
+            "label-mono-sm": ["JetBrains Mono"],
+            "body-lg": ["IBM Plex Sans", "Vazirmatn"],
+            "headline-md": ["Space Grotesk", "Vazirmatn"]
+          },
+          fontSize: {
+            "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "label-mono-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "label-mono-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+            "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  
+  <!-- ======================================================== -->
+  <!-- ADMIN AUTHENTICATION GATE (رمز و پسورد ورود به پنل)     -->
+  <!-- ======================================================== -->
+  <div id="adminLoginGate" class="fixed inset-0 z-[99999] bg-[#0b1c30] flex items-center justify-center p-4 transition-all duration-300">
+    <div class="max-w-md w-full bg-surface-container-lowest text-on-surface rounded-2xl p-8 shadow-2xl border border-surface-container-high flex flex-col gap-5 relative overflow-hidden font-body-md" dir="rtl">
+      <div class="absolute top-0 right-0 left-0 h-2 bg-gradient-to-r from-primary via-primary-container to-tertiary"></div>
+      
+      <!-- Brand & Lock Icon -->
+      <div class="flex flex-col items-center text-center gap-2 pt-2">
+        <div class="w-16 h-16 rounded-2xl bg-primary-container/15 text-primary-container flex items-center justify-center border border-primary-container/30 shadow-inner">
+          <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+        </div>
+        <h2 class="font-headline-sm text-xl font-bold text-on-surface mt-1">ورود به سامانه مدیریت مرکزی مستر دقیق</h2>
+        <span class="font-label-mono-sm text-xs text-secondary uppercase tracking-wider">MR.DAGHIGH CORE - ADMIN ACCESS</span>
+        <p class="text-xs text-secondary leading-relaxed mt-1">
+          جهت مشاهده و مدیریت اکانت‌های کاربران، انبار قطعات و استعلام‌ها، لطفاً اطلاعات امنیتی را وارد نمایید.
+        </p>
+      </div>
+
+      <!-- Error alert -->
+      <div id="adminGateError" class="hidden p-3 bg-error-container/40 border border-error/30 rounded-xl text-xs text-error font-bold flex items-center gap-2">
+        <span class="material-symbols-outlined text-base">error</span>
+        <span id="adminGateErrorText">نام کاربری یا رمز عبور اشتباه است!</span>
+      </div>
+
+      <!-- Login Form -->
+      <form onsubmit="handleAdminGateLogin(event)" class="flex flex-col gap-4">
+        <div>
+          <label class="block text-xs font-semibold text-secondary mb-1">نام کاربری مدیریت:</label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute right-3 text-secondary text-lg">person</span>
+            <input type="text" id="adminUsernameInput" value="admin" required placeholder="admin" dir="ltr" class="w-full bg-surface-container-low pr-10 pl-3 py-2.5 rounded-xl text-sm outline-none border border-surface-container font-label-mono-md focus:border-primary focus:bg-surface-container-lowest transition-all">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-secondary mb-1">رمز عبور امنیتی:</label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute right-3 text-secondary text-lg">lock</span>
+            <input type="password" id="adminPasswordInput" required placeholder="رمز عبور پنل" dir="ltr" class="w-full bg-surface-container-low pr-10 pl-3 py-2.5 rounded-xl text-sm outline-none border border-surface-container font-label-mono-md focus:border-primary focus:bg-surface-container-lowest transition-all">
+          </div>
+          <div class="mt-1.5 flex items-center justify-between text-[11px] text-secondary">
+            <span>اطلاعات پیش‌فرض: <code class="bg-surface-container px-1 py-0.5 rounded font-label-mono-sm font-bold text-on-surface">admin</code> / <code class="bg-surface-container px-1 py-0.5 rounded font-label-mono-sm font-bold text-on-surface">mrdaghigh</code></span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full mt-2 bg-primary hover:bg-primary-container text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+          <span class="material-symbols-outlined text-xl">key</span>
+          <span>ورود به پنل مدیریت</span>
+        </button>
+
+        <a href="index.html" class="w-full py-2 rounded-xl text-xs text-secondary hover:text-on-surface flex items-center justify-center gap-1 transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+          <span>بازگشت به صفحه اصلی فروشگاه</span>
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <!-- Aside Right Sidebar (Exact Stitch Screen 2) -->
+  <aside class="fixed right-0 top-0 h-screen w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="flex flex-col">
+      <div class="h-16 px-gutter flex items-center gap-space-sm bg-inverse-surface border-b border-surface-container-high/10">
+        <img alt="MR. DAGHIGH Logo" class="h-8 w-auto object-contain rounded-full bg-white p-0.5" src="https://lh3.googleusercontent.com/aida/AEtjO1UXV0xouANDo_IPh0AWicDXHLj0ELm4yl19I9sdR__znDmSDfBE5C7Ot9B2nRx09lHVkPj60eBiD0gfCf-KGhdk-zhceGvMzeQCX0UHSUwm_irsR0dd-4Lg99VxjlwcGpJioXnkGsxW_xyf_PKc3AgQ-Xf4xun5qmq-fqa82ReMZ1DlG_Qu2ZT-IB7Kd_Q0KIfZtOZbXW-9JTKnRnWCLydy9KOG5YycSXv5bFupvmLf0JLEOKN6bYtTp3Vn">
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">مستر دقیق</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-secondary-fixed-dim uppercase tracking-wider mt-space-xs">MR.DAGHIGH CORE</span>
+        </div>
+      </div>
+      
+      <div class="mx-gutter my-space-sm p-space-sm rounded-lg bg-surface-container-lowest/10 flex items-center justify-between">
+        <div class="flex items-center gap-space-xs">
+          <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+          <span class="font-label-mono-sm text-label-mono-sm text-surface-container-lowest">انبار و سرور آنلاین</span>
+        </div>
+        <span class="font-label-mono-sm text-label-mono-sm text-secondary-fixed-dim">MS-402</span>
+      </div>
+
+      <nav class="flex flex-col gap-space-xs px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title-md">
+        <a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="dashboard" href="admin.html">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span class="font-body-md text-body-md">داشبورد و آمار</span>
+        </a>
+        <a class="flex items-center justify-between gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="users" href="#users-section">
+          <div class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-[20px] text-primary-fixed-dim">manage_accounts</span>
+            <span class="font-body-md text-body-md">مدیریت کاربران و اکانت‌ها</span>
+          </div>
+          <span id="adminUsersCountBadge" class="bg-primary-container text-white text-[10px] font-label-mono-sm px-1.5 py-0.5 rounded-full font-bold">۳</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="inventory" href="#quick-inventory-section">
+          <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+          <span class="font-body-md text-body-md">مدیریت محصولات و انبار</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="purchase-inquiries" href="#inquiries-table">
+          <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+          <span class="font-body-md text-body-md">استعلام‌ها و درخواست‌های خرید</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="orders" href="#users-section" onclick="showToast('بخش کاربران و پیش‌فاکتورها متصل است')">
+          <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+          <span class="font-body-md text-body-md">سفارشات و پیش‌فاکتورها</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="reports" href="javascript:void(0)" onclick="AccountManager.exportJSON()">
+          <span class="material-symbols-outlined text-[20px]">download</span>
+          <span class="font-body-md text-body-md">خروجی دامین (Export JSON)</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-inverse-on-surface hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="settings" href="#quick-settings">
+          <span class="material-symbols-outlined text-[20px]">tune</span>
+          <span class="font-body-md text-body-md">تنظیمات سیستم</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="p-space-sm flex flex-col gap-space-xs border-t border-surface-container-high/10">
+      <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors" data-path="store-front" href="index.html">
+        <span class="material-symbols-outlined text-[20px]">storefront</span>
+        <span class="font-body-sm text-body-sm">بازگشت به فروشگاه</span>
+      </a>
+      <button type="button" onclick="adminLogout()" class="w-full flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-red-300 hover:bg-red-500/15 hover:text-red-100 transition-colors text-right">
+        <span class="material-symbols-outlined text-[20px] text-red-400">logout</span>
+        <span class="font-body-sm text-body-sm font-bold">خروج از پنل مدیریت</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main View Area (Offset right by 72 = 18rem) -->
+  <div class="pr-72 min-h-screen flex flex-col">
+    <!-- Admin Header -->
+    <header class="fixed top-0 right-72 left-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-lg border-b border-surface-container">
+      <div class="flex items-center gap-space-md">
+        <img alt="MR.DAGHIGH Logo" class="h-8 w-auto object-contain rounded-full bg-white p-0.5" src="https://lh3.googleusercontent.com/aida/AEtjO1UXV0xouANDo_IPh0AWicDXHLj0ELm4yl19I9sdR__znDmSDfBE5C7Ot9B2nRx09lHVkPj60eBiD0gfCf-KGhdk-zhceGvMzeQCX0UHSUwm_irsR0dd-4Lg99VxjlwcGpJioXnkGsxW_xyf_PKc3AgQ-Xf4xun5qmq-fqa82ReMZ1DlG_Qu2ZT-IB7Kd_Q0KIfZtOZbXW-9JTKnRnWCLydy9KOG5YycSXv5bFupvmLf0JLEOKN6bYtTp3Vn">
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute right-space-sm text-on-surface-variant text-[20px]">search</span>
+          <input id="adminSearchInput" oninput="filterAdminTable()" class="w-80 h-10 pr-9 pl-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="جستجوی سریع قطعه، کد کالا، نام مشتری..." type="text">
+        </div>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <button onclick="orderViaTelegram('استعلام کارتابل مدیریت')" class="flex items-center gap-1 text-xs bg-[#2AABEE] text-white px-3 py-1.5 rounded-lg hover:bg-[#229ED9] transition-colors font-bold">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span>تلگرام واحد انبار</span>
+        </button>
+        <div class="h-8 w-[1px] bg-surface-container-high mx-space-xs"></div>
+        <div class="flex items-center gap-space-sm">
+          <div class="flex flex-col text-left">
+            <span class="font-title-md text-body-sm text-on-surface">مهندس ارشد</span>
+            <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">مدیریت مرکزی</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+          </div>
+          <button type="button" onclick="adminLogout()" title="خروج از پنل مدیریت" class="mr-1 p-1.5 rounded-lg text-secondary hover:text-error hover:bg-error-container/20 transition-colors flex items-center justify-center">
+            <span class="material-symbols-outlined text-xl">logout</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Admin Body Content -->
+    <main class="w-full pt-16 px-gutter-lg py-space-lg flex-1 bg-surface">
+      <div class="flex flex-col w-full">
+        <div class="flex flex-col gap-space-lg w-full">
+          <!-- 1. Overview Metric Cards (KPIs) - 5 Responsive Columns -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+            <!-- Metric 1: Telephone Inquiries -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group border border-surface-container">
+              <div class="absolute top-0 right-0 w-1.5 h-full bg-primary-container"></div>
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">استعلام‌های تلفنی امروز</span>
+                  <div class="flex items-baseline gap-space-xs mt-space-xs">
+                    <span class="font-headline-lg text-headline-lg text-on-surface">۴۸</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">مورد</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">phone_callback</span>
+                </div>
+              </div>
+              <div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm flex items-center justify-between">
+                <span class="inline-flex items-center gap-1 font-label-mono-sm text-label-mono-sm text-error font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  ۱۲ در انتظار تماس فوری
+                </span>
+              </div>
+            </div>
+
+            <!-- Metric 2: REGISTERED USERS (Exact User Request) -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group border border-surface-container">
+              <div class="absolute top-0 right-0 w-1.5 h-full bg-emerald-600"></div>
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">کاربران ثبت‌نام شده</span>
+                  <div class="flex items-baseline gap-space-xs mt-space-xs">
+                    <span id="kpiUsersCount" class="font-headline-lg text-headline-lg text-emerald-700 font-bold">۳</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">اکانت فعال</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+                </div>
+              </div>
+              <div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm flex items-center justify-between">
+                <a href="#users-section" class="font-label-mono-sm text-label-mono-sm text-emerald-700 hover:underline flex items-center gap-1">
+                  <span>مشاهده جدول اکانت‌ها</span>
+                  <span class="material-symbols-outlined text-xs">arrow_downward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Metric 3: Total Inventory Parts -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group border border-surface-container">
+              <div class="absolute top-0 right-0 w-1.5 h-full bg-tertiary"></div>
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">کل پارت‌نامبرهای فعال انبار</span>
+                  <div class="flex items-baseline gap-space-xs mt-space-xs">
+                    <span class="font-headline-lg text-headline-lg text-on-surface">۱۵۰</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">قلم کالا</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">inventory_2</span>
+                </div>
+              </div>
+              <div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">
+                  ۱۰۰٪ موجودی انبار فیزیکی لاله زار
+                </span>
+              </div>
+            </div>
+
+            <!-- Metric 3: Proformas Issued -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group border border-surface-container">
+              <div class="absolute top-0 right-0 w-1.5 h-full bg-primary"></div>
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">پیش‌فاکتورهای صادر شده</span>
+                  <div class="flex items-baseline gap-space-xs mt-space-xs">
+                    <span class="font-headline-lg text-headline-lg text-on-surface">۳۱</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">سفارش رسمی</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">receipt_long</span>
+                </div>
+              </div>
+              <div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">
+                  نرخ تبدیل قطعی: ۶۵٪
+                </span>
+              </div>
+            </div>
+
+            <!-- Metric 4: System Status -->
+            <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group border border-surface-container">
+              <div class="absolute top-0 right-0 w-1.5 h-full bg-emerald-600"></div>
+              <div class="flex items-start justify-between">
+                <div class="flex flex-col">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">وضعیت ارتباط تلفنی و تلگرام</span>
+                  <div class="flex items-baseline gap-space-xs mt-space-xs">
+                    <span class="font-headline-lg text-headline-lg text-emerald-600 font-bold">آنلاین</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">hub</span>
+                </div>
+              </div>
+              <div class="mt-space-md pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-emerald-700">
+                  سرور سانترال VoIP فعال است
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content Grid: Inquiries Table (8 cols) + Side Action Panel (4 cols) (Exact Stitch) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+            <!-- Left Column: Table of Recent Inquiries (8 cols) -->
+            <section id="inquiries-table" class="lg:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-surface-container">
+              <!-- Table Header & Controls -->
+              <div class="p-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm border-b border-surface-container">
+                <div class="flex items-center gap-space-sm">
+                  <div class="w-8 h-8 rounded bg-primary-container/10 text-primary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">quick_reference</span>
+                  </div>
+                  <div>
+                    <h2 class="font-title-md text-title-md text-on-surface">استعلام‌ها و درخواست‌های خرید تلفنی</h2>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-xs">
+                  <button id="filterAllBtn" onclick="setInquiryFilter('all')" class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-mono-sm text-label-mono-sm shadow-sm flex items-center gap-1 font-bold">
+                    <span class="material-symbols-outlined text-[16px]">filter_list</span>
+                    <span>همه استعلام‌ها</span>
+                  </button>
+                  <button id="filterPendingBtn" onclick="setInquiryFilter('pending')" class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm shadow-sm flex items-center gap-1">
+                    <span>فقط بدون تماس</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Parametric Table Wrapper -->
+              <div class="overflow-x-auto">
+                <table class="w-full text-right border-collapse">
+                  <thead>
+                    <tr class="bg-surface-container-high/40 text-on-surface-variant font-label-mono-sm text-label-mono-sm">
+                      <th class="py-3 px-space-md">متقاضی / شرکت صنعتی</th>
+                      <th class="py-3 px-space-md">قطعه / ابزار درخواستی</th>
+                      <th class="py-3 px-space-md">تعداد</th>
+                      <th class="py-3 px-space-md">تلفن تماس</th>
+                      <th class="py-3 px-space-md">زمان ثبت</th>
+                      <th class="py-3 px-space-md">وضعیت استعلام</th>
+                      <th class="py-3 px-space-md text-center">اقدام فنی</th>
+                    </tr>
+                  </thead>
+                  <tbody id="inquiryTableBody" class="font-body-sm text-body-sm divide-y divide-surface-container">
+                    <!-- Item 1 (Exact Stitch) -->
+                    <tr data-status="pending" class="inquiry-row hover:bg-surface-container-low/70 transition-colors">
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-title-md text-body-sm text-on-surface font-medium">مهندس کیهانی</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">الکترو محرک سپاهان</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">STM32F407VGT6</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">میکروکنترلر ARM Cortex-M4 LQFP-100</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm font-bold text-on-surface">۵۰ عدد</td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm text-secondary" dir="ltr">
+                        <a href="tel:09133149821" class="hover:underline">0913 314 9821</a>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">۱۲ دقیقه پیش</td>
+                      <td class="py-3 px-space-md">
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-error/10 text-error">
+                          <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                          در انتظار تماس
+                        </span>
+                      </td>
+                      <td class="py-3 px-space-md text-center">
+                        <div class="inline-flex items-center gap-1">
+                          <a href="tel:09133149821" class="w-8 h-8 rounded bg-primary-container text-white flex items-center justify-center hover:bg-primary transition-colors" title="ثبت تماس و مذاکره تلفنی">
+                            <span class="material-symbols-outlined text-[16px]">call</span>
+                          </a>
+                          <button onclick="showToast('پیش‌فاکتور رسمی شماره ۱۴۰۳-۸۷۲ برای مهندس کیهانی صادر شد', 'success')" class="w-8 h-8 rounded bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" title="صدور پیش‌فاکتور" type="button">
+                            <span class="material-symbols-outlined text-[16px]">post_add</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Item 2 (Exact Stitch) -->
+                    <tr data-status="negotiated" class="inquiry-row hover:bg-surface-container-low/70 transition-colors bg-surface-container-low/20">
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-title-md text-body-sm text-on-surface font-medium">آقای خادمی</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">کارگاه تخصصی برد و تعمیرات ماینر</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">QUICK 706W+</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">هیتر و هویه هوای گرم دیجیتال ۲ کاره اورجینال</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm font-bold text-on-surface">۲ دستگاه</td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm text-secondary" dir="ltr">
+                        <a href="tel:09128701254" class="hover:underline">0912 870 1254</a>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">۳۴ دقیقه پیش</td>
+                      <td class="py-3 px-space-md">
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                          <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                          مذاکره شده
+                        </span>
+                      </td>
+                      <td class="py-3 px-space-md text-center">
+                        <div class="inline-flex items-center gap-1">
+                          <a href="tel:09128701254" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors" title="تماس مجدد">
+                            <span class="material-symbols-outlined text-[16px]">call</span>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Item 3 (Exact Stitch) -->
+                    <tr data-status="proforma" class="inquiry-row hover:bg-surface-container-low/70 transition-colors">
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-title-md text-body-sm text-on-surface font-medium">واحد بازرگانی رادمان</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">تجهیزات هوشمند گلخانه‌ای</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md">
+                        <div class="flex flex-col">
+                          <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">DS18B20 (Waterproof)</span>
+                          <span class="text-[11px] font-body-sm text-on-surface-variant">سنسور دما دیجیتال ضد آب با کابل ۱ متری</span>
+                        </div>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm font-bold text-on-surface">۱۵ عدد</td>
+                      <td class="py-3 px-space-md font-label-mono-md text-body-sm text-secondary" dir="ltr">
+                        <a href="tel:02188452300" class="hover:underline">021 8845 2300</a>
+                      </td>
+                      <td class="py-3 px-space-md font-label-mono-sm text-label-mono-sm text-on-surface-variant">۱ ساعت پیش</td>
+                      <td class="py-3 px-space-md">
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-container-highest text-on-surface">
+                          <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                          پیش‌فاکتور صادر شد
+                        </span>
+                      </td>
+                      <td class="py-3 px-space-md text-center">
+                        <div class="inline-flex items-center gap-1">
+                          <button onclick="showToast('پیش‌فاکتور #۲۴۳۵: ۱۵ عدد DS18B20 آماده چاپ است')" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors" title="مشاهده پیش فاکتور" type="button">
+                            <span class="material-symbols-outlined text-[16px]">visibility</span>
+                          </button>
+                          <button onclick="showToast('کد رهگیری تیپاکس به شماره ۰۲۱۸۸۴۵۲۳۰۰ پیامک شد', 'success')" class="w-8 h-8 rounded bg-surface-container text-secondary flex items-center justify-center hover:text-on-surface transition-colors" title="پیگیری ارسال کالا" type="button">
+                            <span class="material-symbols-outlined text-[16px]">local_shipping</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Table Footer (Exact Stitch) -->
+              <div class="p-space-sm bg-surface-container-low flex items-center justify-between border-t border-surface-container">
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">نمایش ۳ مورد از ۴۸ استعلام دریافتی شیفت جاری</span>
+                <div class="flex items-center gap-space-xs">
+                  <button onclick="showToast('تمامی استعلام‌های شیفت روزانه لود شد')" class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface text-body-sm font-medium hover:bg-surface-container transition-colors shadow-xs">
+                    مشاهده تمام تاریخچه استعلام‌ها
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Right Column: Fast Inventory Action & Store Settings (4 cols) (Exact Stitch) -->
+            <div class="lg:col-span-4 flex flex-col gap-space-lg">
+              <!-- 3. Inventory & Fast Stock Action Section -->
+              <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md border border-surface-container">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary-container text-[22px]">bolt</span>
+                    <h3 class="font-title-md text-title-md text-on-surface">مدیریت سریع موجودی و انبار</h3>
+                  </div>
+                  <button onclick="openNewPartModal()" class="px-space-sm py-1 rounded bg-primary-container text-white font-title-md text-[12px] flex items-center gap-1 hover:bg-primary transition-colors" type="button">
+                    <span class="material-symbols-outlined text-[16px]">add</span>
+                    <span>ثبت قطعه جدید</span>
+                  </button>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  تنظیم وضعیت دسترسی لحظه‌ای قطعات جهت جلوگیری از تماس غیرضروری مشتریان صنعتی:
+                </p>
+
+                <!-- Rapid Toggle List (Exact Stitch) -->
+                <div class="flex flex-col gap-space-xs" id="quickStockList">
+                  <!-- Quick Item 1: ESP32 -->
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+                    <div class="flex flex-col">
+                      <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">ESP32-WROOM-32D</span>
+                      <span class="text-[11px] font-body-sm text-on-surface-variant">موجودی باقی‌مانده: ۸ عدد</span>
+                    </div>
+                    <div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-md shadow-xs" data-stock-row="esp32">
+                      <button onclick="setStockStatus(this, 'in_stock', 'ESP32-WROOM-32D')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-primary-container text-white">موجود</button>
+                      <button onclick="setStockStatus(this, 'inquiry', 'ESP32-WROOM-32D')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-on-surface">استعلام</button>
+                      <button onclick="setStockStatus(this, 'out', 'ESP32-WROOM-32D')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-error">ناموجود</button>
+                    </div>
+                  </div>
+
+                  <!-- Quick Item 2: Fluke 17B+ -->
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+                    <div class="flex flex-col">
+                      <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">مولتی‌متر FLUKE 17B+</span>
+                      <span class="text-[11px] font-body-sm text-on-surface-variant">موجودی: ۰ دستگاه</span>
+                    </div>
+                    <div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-md shadow-xs" data-stock-row="fluke">
+                      <button onclick="setStockStatus(this, 'in_stock', 'FLUKE 17B+')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-on-surface">موجود</button>
+                      <button onclick="setStockStatus(this, 'inquiry', 'FLUKE 17B+')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-secondary-container text-on-secondary-fixed font-bold">استعلام</button>
+                      <button onclick="setStockStatus(this, 'out', 'FLUKE 17B+')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-error">ناموجود</button>
+                    </div>
+                  </div>
+
+                  <!-- Quick Item 3: AMS1117 -->
+                  <div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+                    <div class="flex flex-col">
+                      <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">رگولاتور AMS1117-3.3</span>
+                      <span class="text-[11px] font-body-sm text-on-surface-variant">موجودی: ۱,۲۰۰ عدد</span>
+                    </div>
+                    <div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-md shadow-xs" data-stock-row="ams">
+                      <button onclick="setStockStatus(this, 'in_stock', 'AMS1117-3.3')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-primary-container text-white">موجود</button>
+                      <button onclick="setStockStatus(this, 'inquiry', 'AMS1117-3.3')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-on-surface">استعلام</button>
+                      <button onclick="setStockStatus(this, 'out', 'AMS1117-3.3')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-error">ناموجود</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Quick Controls for Store Settings (Exact Stitch) -->
+              <div id="quick-settings" class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md border border-surface-container">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
+                  <h3 class="font-title-md text-title-md text-on-surface">تنظیمات سریع و اعلانات فروشگاه</h3>
+                </div>
+                
+                <!-- Toggle: Telephone Availability -->
+                <div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+                  <div class="flex flex-col">
+                    <span class="font-title-md text-body-sm text-on-surface font-bold">پذیرش تماس و استعلام تلفنی</span>
+                    <span id="voipStatusText" class="font-body-sm text-body-sm text-on-surface-variant">خطوط ویپ مستر دقیق هم‌اکنون به کارشناسان متصل است</span>
+                  </div>
+                  <label class="relative inline-flex items-center cursor-pointer">
+                    <input id="voipToggle" checked="" class="sr-only peer" type="checkbox" onchange="toggleVoip(this)">
+                    <div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+                  </label>
+                </div>
+
+                <!-- Fast Announcement Banner update -->
+                <div class="flex flex-col gap-1">
+                  <label class="text-xs text-secondary font-bold">متن پیام نوار اعلان بالای سایت:</label>
+                  <div class="flex gap-2">
+                    <input id="announcementInput" type="text" class="flex-1 bg-surface-container-low px-3 py-1.5 rounded text-xs outline-none border border-surface-container" value="انبار مرکزی لاله زار فعال است - ارسال فوری کلیه سفارشات">
+                    <button onclick="showToast('متن اعلان فروشگاه به‌روزرسانی شد', 'success')" class="bg-primary-container hover:bg-primary text-white text-xs px-3 py-1.5 rounded font-bold transition-colors">ذخیره</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ======================================================== -->
+          <!-- 5. USER & ACCOUNT MANAGEMENT SECTION (اکانت‌های کاربران) -->
+          <!-- ======================================================== -->
+          <section id="users-section" class="w-full bg-surface-container-lowest rounded-xl shadow-sm border border-surface-container overflow-hidden flex flex-col mt-space-md">
+            <!-- Section Header -->
+            <div class="p-space-md border-b border-surface-container flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface-container-lowest">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">manage_accounts</span>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-title-lg text-title-lg text-on-surface font-bold">مدیریت کاربران و اکانت‌های ثبت‌نام شده</h3>
+                    <span id="usersTableTotalBadge" class="bg-emerald-600 text-white text-[11px] font-label-mono-sm px-2 py-0.5 rounded-full font-bold">۳ کاربر</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    لیست کلیه حساب‌های کاربری متصل به سامانه جهت نظارت مدیر، استعلام‌های مرتبط و جداسازی دامین
+                  </p>
+                </div>
+              </div>
+
+              <!-- Top Action Buttons -->
+              <div class="flex items-center gap-2 flex-wrap">
+                <button type="button" onclick="adminPurgeFakeUsers()" class="px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-error-container/30 text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors border border-surface-container" title="حذف حساب‌های آزمایشی و تثبیت اکانت‌های واقعی">
+                  <span class="material-symbols-outlined text-base text-error">cleaning_services</span>
+                  <span>حذف داده‌های فیک</span>
+                </button>
+                <button type="button" onclick="AccountManager.exportJSON()" class="px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors border border-surface-container" title="خروجی JSON تفکیک‌شده جهت انتقال و استقرار روی دامین">
+                  <span class="material-symbols-outlined text-base text-primary">download</span>
+                  <span>دانلود دیتابیس کاربران (JSON)</span>
+                </button>
+                <button type="button" onclick="openAdminNewUserModal()" class="px-3.5 py-2 rounded-xl bg-primary-container hover:bg-primary text-white text-xs font-bold flex items-center gap-1.5 transition-colors shadow-xs">
+                  <span class="material-symbols-outlined text-base">person_add</span>
+                  <span>+ ثبت کاربر جدید</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Filter and Search Toolbar -->
+            <div class="px-space-md py-3 bg-surface-container-low/50 border-b border-surface-container flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-secondary font-semibold">فیلتر نمایش:</span>
+                <div class="inline-flex bg-surface-container p-0.5 rounded-lg text-xs">
+                  <button type="button" id="userTabAll" onclick="setUserFilterTab('all')" class="px-3 py-1 rounded-md font-bold bg-surface-container-lowest text-on-surface shadow-xs transition-all">همه کاربران (<span id="userCountAll">۱</span>)</button>
+                  <button type="button" id="userTabActive" onclick="setUserFilterTab('active')" class="px-3 py-1 rounded-md text-secondary hover:text-on-surface transition-all">فعال و تاییدشده (<span id="userCountActive">۱</span>)</button>
+                  <button type="button" id="userTabBlocked" onclick="setUserFilterTab('blocked')" class="px-3 py-1 rounded-md text-secondary hover:text-on-surface transition-all">مسدود شده (<span id="userCountBlocked">۰</span>)</button>
+                </div>
+              </div>
+
+              <div class="relative flex items-center">
+                <span class="material-symbols-outlined absolute right-3 text-secondary text-base">search</span>
+                <input id="userSearchInput" oninput="searchUsersTable()" type="text" placeholder="جستجوی نام، تلفن، شرکت یا کد اکانت..." class="w-72 bg-surface-container-lowest pr-9 pl-3 py-1.5 rounded-lg text-xs outline-none border border-surface-container focus:border-primary">
+              </div>
+            </div>
+
+            <!-- Users Table Container -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-right border-collapse text-xs" dir="rtl">
+                <thead>
+                  <tr class="bg-surface-container-low text-secondary border-b border-surface-container font-label-mono-sm">
+                    <th class="py-3 px-space-md">کد اکانت</th>
+                    <th class="py-3 px-space-md">نام و مشخصات کاربر</th>
+                    <th class="py-3 px-space-md">شماره موبایل / تماس</th>
+                    <th class="py-3 px-space-md">نام شرکت / واحد صنعتی</th>
+                    <th class="py-3 px-space-md">تاریخ و زمان ثبت‌نام</th>
+                    <th class="py-3 px-space-md text-center">وضعیت دسترسی</th>
+                    <th class="py-3 px-space-md text-center">عملیات مدیریتی</th>
+                  </tr>
+                </thead>
+                <tbody id="adminUsersTableBody" class="divide-y divide-surface-container">
+                  <!-- Generated dynamically via renderAdminUsersTable() -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Table Footer info -->
+            <div class="p-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between border-t border-surface-container text-xs text-secondary gap-2">
+              <span id="userTableSummaryText">داده‌های کاربران به صورت ایزوله و اختصاصی در پایگاه داده سامانه مستر دقیق ذخیره می‌شوند.</span>
+              <div class="flex items-center gap-2">
+                <button onclick="AccountManager.exportJSON()" class="text-primary hover:underline flex items-center gap-1 font-semibold">
+                  <span class="material-symbols-outlined text-sm">cloud_sync</span>
+                  <span>پشتیبان‌گیری و خروجی دیتابیس نهایی</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal: Admin Create User Manually -->
+  <div id="adminNewUserModal" class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 hidden backdrop-blur-xs">
+    <div class="bg-surface-container-lowest text-on-surface rounded-2xl max-w-md w-full p-6 shadow-2xl border border-surface-container relative flex flex-col gap-4 font-body-md" dir="rtl">
+      <div class="flex items-center justify-between border-b border-surface-container pb-3">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary-container text-2xl">person_add</span>
+          <h3 class="font-headline-sm text-lg font-bold text-on-surface">افزودن کاربر واقعی به سامانه</h3>
+        </div>
+        <button type="button" onclick="closeAdminNewUserModal()" class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-secondary hover:text-on-surface">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="handleAdminCreateUser(event)" class="flex flex-col gap-3">
+        <div>
+          <label class="text-xs text-secondary block mb-1 font-semibold">نام و نام خانوادگی:</label>
+          <input id="modalUserFullName" type="text" required placeholder="مثال: مهندس رضوانی" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-sm outline-none border border-surface-container focus:border-primary">
+        </div>
+        <div>
+          <label class="text-xs text-secondary block mb-1 font-semibold">شماره موبایل (جهت ورود کاربر به حساب):</label>
+          <input id="modalUserPhone" type="text" required placeholder="مثال: 09123456789" dir="ltr" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-sm outline-none border border-surface-container font-label-mono-md focus:border-primary">
+        </div>
+        <div>
+          <label class="text-xs text-secondary block mb-1 font-semibold">نام شرکت یا واحد صنعتی (اختیاری):</label>
+          <input id="modalUserCompany" type="text" placeholder="مثال: صنایع پتروشیمی / کارگاه الکترونیک" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-sm outline-none border border-surface-container focus:border-primary">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="text-xs text-secondary block mb-1 font-semibold">نقش کاربر:</label>
+            <select id="modalUserRole" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-xs outline-none border border-surface-container focus:border-primary">
+              <option value="مشتری صنعتی">مشتری صنعتی</option>
+              <option value="مشتری حقوقی / مهندس">مشتری حقوقی / مهندس</option>
+              <option value="کارگاه تولیدی">کارگاه تولیدی</option>
+              <option value="همکار تجاری">همکار تجاری</option>
+              <option value="مدیر ارشد">مدیر سیستم</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-secondary block mb-1 font-semibold">وضعیت دسترسی:</label>
+            <select id="modalUserStatus" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-xs outline-none border border-surface-container focus:border-primary">
+              <option value="active">فعال و مجاز</option>
+              <option value="blocked">مسدود شده</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-secondary block mb-1 font-semibold">رمز عبور کاربر:</label>
+          <input id="modalUserPassword" type="password" required placeholder="حداقل ۴ نویسه" dir="ltr" class="w-full bg-surface-container-low px-3 py-2 rounded-xl text-sm outline-none border border-surface-container font-label-mono-md focus:border-primary">
+        </div>
+
+        <div class="flex gap-2 justify-end pt-3 border-t border-surface-container mt-2">
+          <button type="button" onclick="closeAdminNewUserModal()" class="px-4 py-2 rounded-xl text-xs text-secondary hover:bg-surface-container">انصراف</button>
+          <button type="submit" class="px-5 py-2 rounded-xl text-xs bg-primary-container hover:bg-primary text-white font-bold flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">check</span>
+            <span>ثبت و ذخیره کاربر</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for New Part Registration -->
+  <div id="newPartModal" class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 hidden backdrop-blur-xs">
+    <div class="bg-surface-container-lowest text-on-surface rounded-xl max-w-md w-full p-6 shadow-2xl border border-surface-container relative flex flex-col gap-4 font-body-md" dir="rtl">
+      <div class="flex items-center justify-between border-b border-surface-container pb-3">
+        <h3 class="font-headline-sm text-lg font-bold text-on-surface">ثبت قطعه جدید در انبار</h3>
+        <button type="button" onclick="closeNewPartModal()" class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-secondary hover:text-on-surface">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <div>
+          <label class="text-xs text-secondary block mb-1">پارت نامبر لاتین (MPN):</label>
+          <input id="newPartMpn" type="text" placeholder="مثال: STM32F103C8T6" dir="ltr" class="w-full bg-surface-container-low px-3 py-2 rounded-sm outline-none border border-surface-container font-label-mono-md">
+        </div>
+        <div>
+          <label class="text-xs text-secondary block mb-1">نام فارسی و مشخصات:</label>
+          <input id="newPartDesc" type="text" placeholder="مثال: میکروکنترلر ARM Cortex-M3" class="w-full bg-surface-container-low px-3 py-2 rounded-sm outline-none border border-surface-container">
+        </div>
+        <div>
+          <label class="text-xs text-secondary block mb-1">تعداد موجودی اولیه:</label>
+          <input id="newPartQty" type="number" placeholder="مثال: ۱۰۰" class="w-full bg-surface-container-low px-3 py-2 rounded-sm outline-none border border-surface-container font-label-mono-md">
+        </div>
+      </div>
+
+      <div class="flex gap-2 justify-end pt-3 border-t border-surface-container">
+        <button onclick="closeNewPartModal()" class="px-4 py-2 rounded text-xs text-secondary hover:bg-surface-container">انصراف</button>
+        <button onclick="addNewPartSubmit()" class="px-4 py-2 rounded text-xs bg-primary-container hover:bg-primary text-white font-bold">ثبت و انتشار در سایت</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Interactive Scripts -->
+  <script>
+    // ========================================================
+    // ADMIN AUTHENTICATION STATE & LOGIC
+    // ========================================================
+    const ADMIN_SESSION_KEY = 'mr_daghigh_admin_logged';
+    let currentUserFilter = 'all';
+
+    function checkAdminAuth() {
+      const isLogged = sessionStorage.getItem(ADMIN_SESSION_KEY) === 'true';
+      const gate = document.getElementById('adminLoginGate');
+      if (isLogged) {
+        gate.classList.add('hidden');
+        renderAdminUsersTable();
+      } else {
+        gate.classList.remove('hidden');
+      }
+    }
+
+    function handleAdminGateLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById('adminUsernameInput').value.trim();
+      const pass = document.getElementById('adminPasswordInput').value.trim();
+      const errBox = document.getElementById('adminGateError');
+      const errText = document.getElementById('adminGateErrorText');
+
+      // Allowed credentials:
+      if (user === 'admin' && (pass === 'mrdaghigh' || pass === '123456' || pass === 'admin')) {
+        sessionStorage.setItem(ADMIN_SESSION_KEY, 'true');
+        errBox.classList.add('hidden');
+        document.getElementById('adminLoginGate').classList.add('hidden');
+        showToast('خوش آمدید مهندس. پنل مدیریت باز شد', 'success');
+        renderAdminUsersTable();
+      } else {
+        errBox.classList.remove('hidden');
+        errText.innerText = 'نام کاربری یا رمز عبور اشتباه است! رمز پیش‌فرض: mrdaghigh';
+        showToast('اطلاعات ورود به مدیریت نامعتبر است', 'error');
+      }
+    }
+    window.handleAdminGateLogin = handleAdminGateLogin;
+
+    function adminLogout() {
+      if (confirm('آیا قصد خروج از پنل مدیریت و قفل کردن صفحه را دارید؟')) {
+        sessionStorage.removeItem(ADMIN_SESSION_KEY);
+        const gate = document.getElementById('adminLoginGate');
+        gate.classList.remove('hidden');
+        document.getElementById('adminPasswordInput').value = '';
+        showToast('از پنل مدیریت خارج شدید');
+      }
+    }
+
+    // ========================================================
+    // USERS TABLE RENDERING & ACTIONS
+    // ========================================================
+    function renderAdminUsersTable(filter = currentUserFilter, query = '') {
+      currentUserFilter = filter;
+      const tbody = document.getElementById('adminUsersTableBody');
+      if (!tbody) return;
+
+      if (typeof AccountManager === 'undefined') {
+        setTimeout(() => renderAdminUsersTable(filter, query), 100);
+        return;
+      }
+
+      let accounts = AccountManager.getAccounts();
+      
+      // Update badge counts
+      const totalCount = accounts.length;
+      const activeCount = accounts.filter(a => a.status !== 'blocked').length;
+      const blockedCount = accounts.filter(a => a.status === 'blocked').length;
+
+      const kpiEl = document.getElementById('kpiUsersCount');
+      if (kpiEl) kpiEl.innerText = totalCount;
+
+      const badgeEl = document.getElementById('adminUsersCountBadge');
+      if (badgeEl) badgeEl.innerText = totalCount;
+
+      const tableBadge = document.getElementById('usersTableTotalBadge');
+      if (tableBadge) tableBadge.innerText = `${totalCount} کاربر`;
+
+      const cAll = document.getElementById('userCountAll');
+      if (cAll) cAll.innerText = totalCount;
+      const cAct = document.getElementById('userCountActive');
+      if (cAct) cAct.innerText = activeCount;
+      const cBlk = document.getElementById('userCountBlocked');
+      if (cBlk) cBlk.innerText = blockedCount;
+
+      // Filter by tab
+      if (filter === 'active') {
+        accounts = accounts.filter(a => a.status !== 'blocked');
+      } else if (filter === 'blocked') {
+        accounts = accounts.filter(a => a.status === 'blocked');
+      }
+
+      // Filter by query
+      if (query) {
+        const q = query.toLowerCase();
+        accounts = accounts.filter(a => 
+          (a.fullName && a.fullName.toLowerCase().includes(q)) ||
+          (a.phone && a.phone.includes(q)) ||
+          (a.company && a.company.toLowerCase().includes(q)) ||
+          (a.id && a.id.toLowerCase().includes(q))
+        );
+      }
+
+      if (accounts.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="py-8 text-center text-secondary">
+              <div class="flex flex-col items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-4xl text-surface-container-high">person_off</span>
+                <span class="text-sm font-semibold">هیچ کاربری با این مشخصات یافت نشد</span>
+                <span class="text-xs text-on-surface-variant">می‌توانید با دکمه «+ ثبت کاربر جدید» حساب جدید ایجاد کنید.</span>
+              </div>
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = accounts.map(acc => {
+        const isBlocked = (acc.status === 'blocked' || acc.status === 'مسدود');
+        const roleLabel = acc.role || (acc.id === 'ACC-1001' ? 'مدیر ارشد' : 'مشتری صنعتی');
+        const roleBadge = acc.role === 'مدیر ارشد' || acc.role === 'admin'
+          ? '<span class="text-[10px] text-primary-container font-bold bg-primary/10 px-1.5 py-0.5 rounded">مدیر سیستم</span>'
+          : `<span class="text-[10px] text-secondary font-medium">${roleLabel}</span>`;
+
+        return `
+          <tr class="hover:bg-surface-container-low/50 transition-colors ${isBlocked ? 'bg-error/5' : ''}">
+            <td class="py-3 px-space-md font-label-mono-sm font-semibold text-primary" dir="ltr">${acc.id || 'ACC-—'}</td>
+            <td class="py-3 px-space-md">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full ${isBlocked ? 'bg-error/15 text-error' : 'bg-primary-container/20 text-primary-container'} font-bold flex items-center justify-center text-xs">
+                  ${acc.fullName ? acc.fullName.charAt(0) : 'U'}
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-bold text-on-surface text-xs">${acc.fullName || 'کاربر بدون نام'}</span>
+                  <div class="mt-0.5">${roleBadge}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-space-md font-label-mono-sm" dir="ltr">
+              <a href="tel:${acc.phone}" class="text-on-surface hover:text-primary transition-colors flex items-center gap-1.5 font-bold">
+                <span>${acc.phone}</span>
+                <span class="material-symbols-outlined text-xs text-secondary">call</span>
+              </a>
+            </td>
+            <td class="py-3 px-space-md text-secondary text-xs">${acc.company || '—'}</td>
+            <td class="py-3 px-space-md text-secondary font-label-mono-sm text-[11px]">${acc.registeredAt || 'ثبت در سیستم'}</td>
+            <td class="py-3 px-space-md text-center">
+              ${isBlocked ? 
+                `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-error/10 text-error">
+                  <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  مسدود شده
+                </span>` : 
+                `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  فعال و مجاز
+                </span>`
+              }
+            </td>
+            <td class="py-3 px-space-md text-center">
+              <div class="inline-flex items-center gap-1.5 justify-center">
+                <!-- Block / Unblock Toggle Button -->
+                <button type="button" onclick="adminToggleUserStatus('${acc.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${isBlocked ? 'bg-emerald-700 hover:bg-emerald-800 text-white shadow-xs' : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300'}" title="${isBlocked ? 'رفع مسدودیت و بازگردانی دسترسی کاربر' : 'مسدود کردن دسترسی کاربر به سیستم'}">
+                  <span class="material-symbols-outlined text-[15px]">${isBlocked ? 'lock_open' : 'block'}</span>
+                  <span>${isBlocked ? 'رفع مسدودیت' : 'مسدود کردن'}</span>
+                </button>
+                <!-- Direct Phone Call -->
+                <button type="button" onclick="adminCallUser('${acc.phone}', '${acc.fullName}')" class="w-7 h-7 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary hover:text-on-surface flex items-center justify-center transition-colors" title="تماس تلفنی با کاربر">
+                  <span class="material-symbols-outlined text-[15px]">phone</span>
+                </button>
+                <!-- Delete User Button -->
+                <button type="button" onclick="adminDeleteUser('${acc.id}', '${acc.fullName}')" class="w-7 h-7 rounded-lg bg-surface-container hover:bg-error-container/40 text-secondary hover:text-error flex items-center justify-center transition-colors" title="حذف کاربر از سیستم">
+                  <span class="material-symbols-outlined text-[15px]">delete</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function setUserFilterTab(tab) {
+      ['userTabAll', 'userTabActive', 'userTabBlocked'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.className = 'px-3 py-1 rounded-md text-secondary hover:text-on-surface transition-all';
+        }
+      });
+      const activeBtnId = tab === 'all' ? 'userTabAll' : (tab === 'active' ? 'userTabActive' : 'userTabBlocked');
+      const activeEl = document.getElementById(activeBtnId);
+      if (activeEl) {
+        activeEl.className = 'px-3 py-1 rounded-md font-bold bg-surface-container-lowest text-on-surface shadow-xs transition-all';
+      }
+      renderAdminUsersTable(tab, document.getElementById('userSearchInput').value);
+    }
+
+    function searchUsersTable() {
+      const q = document.getElementById('userSearchInput').value.trim();
+      renderAdminUsersTable(currentUserFilter, q);
+    }
+
+    function adminToggleUserStatus(userId) {
+      if (!window.AccountManager) return;
+      const updated = AccountManager.toggleBlock(userId);
+      if (!updated) {
+        showToast('کاربر مورد نظر یافت نشد', 'error');
+        return;
+      }
+      const isBlocked = (updated.status === 'blocked' || updated.status === 'مسدود');
+      showToast(
+        isBlocked 
+          ? `حساب کاربری «${updated.fullName}» مسدود گردید.` 
+          : `مسدودیت حساب «${updated.fullName}» با موفقیت برطرف شد و فعال گردید.`,
+        isBlocked ? 'error' : 'success'
+      );
+      renderAdminUsersTable();
+    }
+
+    function adminDeleteUser(userId, userName) {
+      if (!window.AccountManager) return;
+      if (confirm(`آیا از حذف دائم کاربر «${userName || userId}» اطمینان دارید؟ این عمل غیرقابل بازگشت است.`)) {
+        AccountManager.deleteAccount(userId);
+        showToast(`حساب کاربر «${userName}» با موفقیت حذف گردید.`, 'success');
+        renderAdminUsersTable();
+      }
+    }
+
+    function adminPurgeFakeUsers() {
+      if (!window.AccountManager) return;
+      if (confirm('آیا از حذف تمامی کاربران فیک و تستی اطمینان دارید؟ تمام داده‌های نمایشی حذف شده و فقط اطلاعات حساب‌های واقعی باقی می‌ماند.')) {
+        AccountManager.purgeFakeAccounts();
+        showToast('حساب‌های فیک حذف شدند و فقط کاربران اصلی و واقعی تثبیت شدند.', 'success');
+        renderAdminUsersTable();
+      }
+    }
+
+    function adminCallUser(phone, name) {
+      if (!phone) return;
+      window.location.href = `tel:${phone}`;
+      showToast(`در حال برقراری تماس با ${name}...`);
+    }
+
+    function openAdminNewUserModal() {
+      document.getElementById('adminNewUserModal').classList.remove('hidden');
+    }
+
+    function closeAdminNewUserModal() {
+      document.getElementById('adminNewUserModal').classList.add('hidden');
+    }
+
+    function handleAdminCreateUser(e) {
+      e.preventDefault();
+      if (!window.AccountManager) return;
+      const fullName = document.getElementById('modalUserFullName').value.trim();
+      const phone = document.getElementById('modalUserPhone').value.trim();
+      const company = document.getElementById('modalUserCompany').value.trim();
+      const role = document.getElementById('modalUserRole') ? document.getElementById('modalUserRole').value : 'مشتری صنعتی';
+      const status = document.getElementById('modalUserStatus') ? document.getElementById('modalUserStatus').value : 'active';
+      const password = document.getElementById('modalUserPassword').value.trim();
+
+      const result = AccountManager.register(
+        { fullName, phone, company, password, role, status },
+        { skipLogin: true, byAdmin: true }
+      );
+
+      if (result.success) {
+        showToast(`کاربر «${fullName}» با موفقیت ثبت شد و دسترسی فعال گردید.`, 'success');
+        // Reset inputs
+        document.getElementById('modalUserFullName').value = '';
+        document.getElementById('modalUserPhone').value = '';
+        document.getElementById('modalUserCompany').value = '';
+        document.getElementById('modalUserPassword').value = '';
+        closeAdminNewUserModal();
+        renderAdminUsersTable();
+      } else {
+        showToast(result.message || 'خطا در ثبت کاربر جدید', 'error');
+      }
+    }
+
+    // Window global functions
+    window.adminToggleUserStatus = adminToggleUserStatus;
+    window.adminDeleteUser = adminDeleteUser;
+    window.adminPurgeFakeUsers = adminPurgeFakeUsers;
+    window.adminCallUser = adminCallUser;
+    window.openAdminNewUserModal = openAdminNewUserModal;
+    window.closeAdminNewUserModal = closeAdminNewUserModal;
+    window.handleAdminCreateUser = handleAdminCreateUser;
+    window.setUserFilterTab = setUserFilterTab;
+    window.searchUsersTable = searchUsersTable;
+    window.renderAdminUsersTable = renderAdminUsersTable;
+
+    // Window load check
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAdminAuth();
+      window.addEventListener('mrdaghigh:accounts_updated', () => {
+        renderAdminUsersTable();
+      });
+    });
+    function setStockStatus(btn, status, partName) {
+      const container = btn.parentElement;
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach(b => {
+        b.className = 'px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-on-surface';
+      });
+
+      if (status === 'in_stock') {
+        btn.className = 'px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-primary-container text-white font-bold';
+        showToast(`وضعیت «${partName}» به «موجود» تغییر یافت`, 'success');
+      } else if (status === 'inquiry') {
+        btn.className = 'px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-secondary-container text-on-secondary-fixed font-bold';
+        showToast(`وضعیت «${partName}» به «استعلام» تغییر یافت`);
+      } else if (status === 'out') {
+        btn.className = 'px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-error/10 text-error font-bold';
+        showToast(`وضعیت «${partName}» به «ناموجود» تغییر یافت`, 'error');
+      }
+    }
+
+    function toggleVoip(checkbox) {
+      const label = document.getElementById('voipStatusText');
+      if (checkbox.checked) {
+        label.innerText = 'خطوط ویپ مستر دقیق هم‌اکنون به کارشناسان متصل است';
+        showToast('خطوط تلفنی فعال و در دسترس مشتریان قرار گرفت', 'success');
+      } else {
+        label.innerText = 'خطوط تلفنی به حالت پیام‌گیر صوتی شیفت شب منتقل شد';
+        showToast('پذیرش تلفنی غیرفعال شد', 'error');
+      }
+    }
+
+    function setInquiryFilter(mode) {
+      const allBtn = document.getElementById('filterAllBtn');
+      const pendingBtn = document.getElementById('filterPendingBtn');
+      const rows = document.querySelectorAll('.inquiry-row');
+
+      if (mode === 'all') {
+        allBtn.classList.add('font-bold');
+        allBtn.classList.remove('text-on-surface-variant');
+        pendingBtn.classList.remove('font-bold');
+        rows.forEach(r => r.style.display = '');
+      } else {
+        pendingBtn.classList.add('font-bold');
+        allBtn.classList.remove('font-bold');
+        rows.forEach(r => {
+          if (r.getAttribute('data-status') === 'pending') {
+            r.style.display = '';
+          } else {
+            r.style.display = 'none';
+          }
+        });
+      }
+    }
+
+    function filterAdminTable() {
+      const q = document.getElementById('adminSearchInput').value.trim().toLowerCase();
+      const rows = document.querySelectorAll('.inquiry-row');
+      rows.forEach(r => {
+        const text = r.innerText.toLowerCase();
+        r.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+
+    function openNewPartModal() {
+      document.getElementById('newPartModal').classList.remove('hidden');
+    }
+
+    function closeNewPartModal() {
+      document.getElementById('newPartModal').classList.add('hidden');
+    }
+
+    function addNewPartSubmit() {
+      const mpn = document.getElementById('newPartMpn').value.trim();
+      const desc = document.getElementById('newPartDesc').value.trim();
+      const qty = document.getElementById('newPartQty').value.trim();
+
+      if (!mpn) {
+        showToast('لطفاً پارت نامبر را وارد نمایید', 'error');
+        return;
+      }
+
+      const list = document.getElementById('quickStockList');
+      const newItem = document.createElement('div');
+      newItem.className = 'p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between animate-fade-in';
+      newItem.innerHTML = `
+        <div class="flex flex-col">
+          <span class="font-label-mono-md text-body-sm text-on-surface font-semibold" dir="ltr">${mpn}</span>
+          <span class="text-[11px] font-body-sm text-on-surface-variant">موجودی: ${qty || '۰'} عدد (${desc || 'قطعه صنعتی'})</span>
+        </div>
+        <div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded-md shadow-xs">
+          <button onclick="setStockStatus(this, 'in_stock', '${mpn}')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-primary-container text-white font-bold">موجود</button>
+          <button onclick="setStockStatus(this, 'inquiry', '${mpn}')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-on-surface">استعلام</button>
+          <button onclick="setStockStatus(this, 'out', '${mpn}')" class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm text-on-surface-variant hover:text-error">ناموجود</button>
+        </div>
+      `;
+      list.prepend(newItem);
+      closeNewPartModal();
+      showToast(`قطعه «${mpn}» با موفقیت در سیستم ثبت گردید`, 'success');
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

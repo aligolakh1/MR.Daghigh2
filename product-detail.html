@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>میکروکنترلر ۳۲ بیتی پیشرفته STM32F407VGT6 آرم کورتکس M4 | مستر دقیق (MR. Daghigh)</title>
+  <meta name="description" content="خرید و استعلام قیمت میکروکنترلر ۳۲ بیتی STM32F407VGT6 در پکیج LQFP-100 اورجینال با تست فیزیکی، تحویل فوری در انبار لاله زار تهران.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Vazirmatn', 'IBM Plex Sans', sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-primary": "#ffb596",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface-container-highest": "#d3e4fe",
+            "on-error-container": "#93000a",
+            "surface-variant": "#d3e4fe",
+            "inverse-surface": "#213145",
+            "outline-variant": "#e2bfb2",
+            "secondary": "#565e74",
+            "on-error": "#ffffff",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "primary-fixed": "#ffdbcd",
+            "tertiary-container": "#3da0e5",
+            "surface": "#f8f9ff",
+            "surface-tint": "#a43e00",
+            "on-primary-container": "#591e00",
+            "on-background": "#0b1c30",
+            "on-secondary-container": "#5c647a",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-primary-fixed": "#360f00",
+            "on-surface": "#0b1c30",
+            "on-secondary": "#ffffff",
+            "primary-container": "#ff6b1a",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "on-tertiary-fixed-variant": "#004b73",
+            "surface-dim": "#cbdbf5",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#93ccff",
+            "surface-container-high": "#dce9ff",
+            "surface-container": "#e5eeff",
+            "outline": "#8e7165",
+            "tertiary-fixed": "#cce5ff",
+            "secondary-container": "#dae2fd",
+            "on-primary-fixed-variant": "#7d2d00",
+            "on-tertiary-container": "#003452",
+            "primary-fixed-dim": "#ffb596",
+            "secondary-fixed": "#dae2fd",
+            "on-surface-variant": "#5a4137",
+            "background": "#f8f9ff",
+            "surface-container-low": "#eff4ff",
+            "tertiary": "#006398",
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary": "#ffffff",
+            "primary": "#a43e00",
+            "on-tertiary-fixed": "#001d31",
+            "on-secondary-fixed": "#131b2e"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "margin-lg": "3rem",
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-md": "2rem",
+            "gutter-md": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-xl": "2.5rem",
+            "gutter-lg": "2rem"
+          },
+          fontFamily: {
+            "title-md": ["IBM Plex Sans", "Vazirmatn"],
+            "headline-lg": ["Space Grotesk", "Vazirmatn"],
+            "body-sm": ["IBM Plex Sans", "Vazirmatn"],
+            "display-lg": ["Space Grotesk", "Vazirmatn"],
+            "body-lg": ["IBM Plex Sans", "Vazirmatn"],
+            "headline-md": ["Space Grotesk", "Vazirmatn"],
+            "label-mono-md": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Space Grotesk", "Vazirmatn"],
+            "headline-sm": ["Space Grotesk", "Vazirmatn"],
+            "display-lg-mobile": ["Space Grotesk", "Vazirmatn"],
+            "label-mono-sm": ["JetBrains Mono"],
+            "body-md": ["IBM Plex Sans", "Vazirmatn"]
+          },
+          fontSize: {
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-mono-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-mono-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+            "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+  
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full z-50 bg-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-44">
+      
+      <!-- Top Bar -->
+      <div class="bg-inverse-surface text-inverse-on-surface h-10">
+        <div class="max-w-7xl mx-auto px-gutter-lg h-full flex items-center justify-between text-body-sm font-body-sm"></div>
+      </div>
+
+      <!-- Main Logo & Action Bar -->
+      <div class="h-20 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-gutter-lg h-full flex items-center justify-between gap-gutter-lg">
+          
+          <!-- Brand Logo -->
+          <div class="flex items-center gap-space-md">
+            <a href="index.html" class="flex items-center gap-space-sm group cursor-pointer">
+              <div class="relative flex items-center justify-center p-0.5 rounded-full bg-surface-container-high/40 shadow-sm ring-1 ring-outline-variant/40">
+                <img alt="MR. DAGHIGH Logo" class="w-10 h-10 rounded-full object-cover shadow-sm transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V6X-zWmzhvgEtAloJPkzz3AIcvX6Q2nXzNnPFNoVHheIqcGq-AymnunucW_JqmVDoRsEjaVKkIj1d3kUTLvQ0PLF04AeDMZEG1qU00N3GyTqTE3tK0h8Gjb0QyDt7Vcj99aAKYQJ0ljMTHbpoyxVE66GDvHONy-m5zdqdWeJLB_TSGX8cIAKDGJxBWucz3q6XfyKPy-KU6A2qKVowZ7Psa-QIqOwuSZVPgS_90qahICaK8cvw3Z-IvUQSt">
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-1.5 leading-none">
+                  <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">مستـر دقیـق</span>
+                  <span class="font-label-mono-md text-label-mono-md font-bold px-1.5 py-0.5 rounded bg-inverse-surface text-inverse-on-surface tracking-wider flex items-center gap-0.5 shadow-sm">
+                    <span dir="ltr" class="flex items-center gap-0.5">
+                      <span class="text-primary-container font-bold">MR.</span>
+                      <span class="tracking-wider text-inverse-on-surface uppercase">Daghigh</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="flex-1 max-w-2xl">
+            <div class="flex items-center bg-surface-container-low rounded-lg p-1">
+              <div class="px-space-md py-space-xs flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm bg-surface rounded cursor-pointer">
+                <span class="material-symbols-outlined text-title-md text-secondary">tune</span>
+                <span>همه بخش‌ها</span>
+                <span class="material-symbols-outlined text-body-sm">expand_more</span>
+              </div>
+              <div class="flex-1 flex items-center px-space-md">
+                <span class="material-symbols-outlined text-secondary ml-space-xs">search</span>
+                <input class="w-full bg-transparent outline-none text-body-sm font-body-sm text-on-surface placeholder:text-secondary font-label-mono-sm text-label-mono-sm text-right" dir="rtl" placeholder="جستجو" type="text">
+              </div>
+              <button class="bg-primary-container text-on-primary-container font-headline-sm text-body-md font-bold px-space-lg py-space-xs rounded flex items-center gap-space-xs hover:bg-primary hover:text-on-primary transition-all">
+                <span class="material-symbols-outlined text-title-md">search</span>
+                <span>جستجو</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- User Profile -->
+          <div class="flex items-center gap-gutter">
+            <a class="flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors py-space-xs px-space-sm cursor-pointer" data-path="login" href="javascript:void(0)" onclick="openAuthModal('login'); return false;">
+              <span class="material-symbols-outlined text-headline-sm text-secondary">account_circle</span>
+              <div class="flex flex-col">
+                <span class="font-body-sm text-body-sm text-secondary">حساب کاربری</span>
+                <span class="font-title-md text-title-md font-bold text-on-surface">ورود / عضویت</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Nav Menu -->
+      <div class="h-14 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="max-w-7xl mx-auto px-gutter-lg h-full flex items-center justify-between">
+          <div class="flex items-center h-full gap-gutter-md">
+            <div class="relative group h-full flex items-center">
+              <a href="products.html" class="bg-inverse-surface text-inverse-on-surface font-title-md text-title-md font-bold px-space-lg h-10 rounded flex items-center gap-space-sm cursor-pointer">
+                <span class="material-symbols-outlined text-title-md text-primary-container">menu_open</span>
+                <span>دسته‌بندی تخصصی قطعات</span>
+                <span class="material-symbols-outlined text-body-sm">expand_more</span>
+              </a>
+            </div>
+
+            <nav class="flex items-center gap-gutter" data-active-classes="text-primary font-bold">
+              <a class="text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-colors" data-path="home" href="index.html">صفحه اصلی</a>
+              <a class="text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-colors" data-path="products" href="products.html">قطعات</a>
+              <a class="text-on-surface-variant hover:text-on-surface font-title-md text-title-md transition-colors" data-path="contact" href="contact.html">تماس با پشتیبانی</a>
+            </nav>
+          </div>
+
+          <div class="flex items-center gap-space-sm text-secondary font-label-mono-sm text-label-mono-sm">
+            <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            <span>سیستم انبار: فعال و آنلاین</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PRODUCT WORKSPACE -->
+  <main class="w-full pt-44 bg-surface">
+    <div class="flex flex-col w-full">
+
+      <!-- Breadcrumb Bar -->
+      <div class="w-full bg-surface-container-low py-space-sm px-gutter-lg shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between text-body-sm font-body-sm text-secondary"></div>
+      </div>
+
+      <!-- Main Specification Workspace -->
+      <section class="max-w-7xl mx-auto w-full px-gutter-lg py-space-lg">
+        <div class="grid grid-cols-12 gap-gutter-lg items-start">
+
+          <!-- Left Column: Title & Purchasing Architecture (6 cols) -->
+          <div class="col-span-12 lg:col-span-6 flex flex-col gap-space-md order-2 lg:order-1">
+            
+            <!-- Title & Rating Card -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+              <div class="flex items-center justify-between flex-wrap gap-space-xs">
+                <div class="flex items-center gap-1 text-secondary font-body-sm text-body-sm">
+                  <div class="flex text-amber-500">
+                    <span class="material-symbols-outlined text-title-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-title-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-title-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-title-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-title-md" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                  </div>
+                  <span class="font-label-mono-sm font-bold text-on-surface">۴.۹</span>
+                  <span class="text-secondary/70">(۲۸ بررسی )</span>
+                </div>
+              </div>
+
+              <h1 class="font-headline-md text-headline-md font-bold text-on-surface leading-tight mt-1">
+                میکروکنترلر ۳۲ بیتی پیشرفته STM32F407VGT6 آرم کورتکس M4
+              </h1>
+            </div>
+
+            <!-- Pricing & Inquiry Box -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+              <div class="flex items-center justify-between border-b border-surface-container pb-space-sm">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-title-md text-primary">contact_phone</span>
+                  <h2 class="font-title-md text-title-md font-bold text-on-surface">استعلام قیمت و موجودی قطعه</h2>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span class="font-headline-sm text-headline-sm font-bold text-primary">برای خرید تماس بگیرید</span>
+                  <span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-sm py-1 rounded text-secondary font-semibold">نوسان نرخ ارز صنعتی</span>
+                </div>
+                <p class="text-secondary font-body-sm text-body-sm leading-relaxed text-justify">
+                  به دلیل نوسانات نرخ ارز و لزوم استعلام به‌روز موجودی انبار تهران و پارت‌های وارداتی، لطفاً جهت دریافت پیش‌فاکتور رسمی، قیمت نهایی و زمان تحویل با واحد فروش مهندسی تماس حاصل فرمایید.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-space-sm">
+                <a href="tel:02188884321" class="bg-primary hover:bg-primary/90 text-on-primary font-headline-sm text-title-md font-bold py-space-md px-space-md rounded-lg flex items-center justify-center gap-space-sm transition-all shadow-md">
+                  <span class="material-symbols-outlined text-headline-sm">phone_in_talk</span>
+                  <span>تماس با واحد فروش و استعلام قیمت</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: High-Density Technical Media Chamber (6 cols) -->
+          <div class="col-span-12 lg:col-span-6 flex flex-col gap-space-md order-1 lg:order-2">
+            
+            <!-- Main Macro Viewport -->
+            <div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden group">
+              
+              <!-- Engineering Reticle Overlay -->
+              <div class="absolute inset-0 pointer-events-none opacity-40 flex flex-col justify-between p-space-md z-10">
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-secondary">
+                  <span>SCALE 1:1 [LQFP-100]</span>
+                  <span>14x14 mm</span>
+                </div>
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-secondary">
+                  <span>PITCH: 0.50mm</span>
+                  <span>QC: PASSED 2024-Q3</span>
+                </div>
+              </div>
+
+              <!-- Interactive Action Buttons on Image (Top-Left) -->
+              <div class="absolute top-space-md left-space-md z-20 flex flex-col gap-space-xs">
+                <button class="bg-surface/90 hover:bg-surface text-on-surface p-space-xs rounded shadow-sm hover:text-primary transition-all" title="بزرگنمایی مهندسی">
+                  <span class="material-symbols-outlined text-title-md">zoom_in</span>
+                </button>
+                <button class="bg-surface/90 hover:bg-surface text-on-surface p-space-xs rounded shadow-sm hover:text-primary transition-all" title="افزودن به علاقه‌مندی‌ها">
+                  <span class="material-symbols-outlined text-title-md">bookmark</span>
+                </button>
+                <button class="bg-surface/90 hover:bg-surface text-on-surface p-space-xs rounded shadow-sm hover:text-primary transition-all" title="اشتراک‌گذاری قطعه">
+                  <span class="material-symbols-outlined text-title-md">share</span>
+                </button>
+              </div>
+
+              <!-- Main Technical Photograph -->
+              <div class="w-full h-96 flex items-center justify-center relative my-space-sm">
+                <img id="mainProductImg" class="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-300 group-hover:scale-105" alt="STM32F407VGT6 Microcontroller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmGl-UOQC1nGsWx13jQSJ8-4nVu7Erti99QVIy9wirR7bKem984mw736mk-AjLeZuB1Y7zVil-NPHo8BCAH0Lj_tJaQerLRvwd4tpOcBo-36QddMH0nouDetfxuIOFHstbzEBdVcyQ5LSlJhcgrse3TEw_fumozY_aYxy9h_oVWpxRxc2WxrFPrkZQcn_0H1cCEYi9-kP_oyd7_R3KEhTqE2LgPgxOReJAuJMN-F2be1Q6t9rINXHKdA">
+              </div>
+
+            </div>
+
+            <!-- Thumbnails Multi-Angle Technical Carousel -->
+            <div class="grid grid-cols-4 gap-space-sm">
+              <button onclick="setMainImage('https://lh3.googleusercontent.com/aida-public/AB6AXuAWLh8_QaF3YPWEIAsemrjOXPJwXhjugfjPIEz3pFfHTDOgZwKqtt9qYXQjwi2A09Sh622awFrDBOgw2shfGDYs7NL_yhPDjgY2rUm4fMkqqatano0-bOC1VtLmIRN1Bc1ulQM8NpMfV1jdtKMSzgZtL9I5oIf8Zv91XfqdRhxKG7rMRBENSkxtrNqtJyKQwLYwhU3gPi5mUUo3vfqnB3bmuChna9Z6VtwaC5NRIF7JAUGHhzjj_rA7kw')" class="bg-surface-container-lowest p-1 rounded-lg shadow-sm hover:bg-primary/5 transition-all text-right group">
+                <div class="w-full h-20 overflow-hidden rounded bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="نمای بالا IC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWLh8_QaF3YPWEIAsemrjOXPJwXhjugfjPIEz3pFfHTDOgZwKqtt9qYXQjwi2A09Sh622awFrDBOgw2shfGDYs7NL_yhPDjgY2rUm4fMkqqatano0-bOC1VtLmIRN1Bc1ulQM8NpMfV1jdtKMSzgZtL9I5oIf8Zv91XfqdRhxKG7rMRBENSkxtrNqtJyKQwLYwhU3gPi5mUUo3vfqnB3bmuChna9Z6VtwaC5NRIF7JAUGHhzjj_rA7kw">
+                </div>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary block mt-1 text-center truncate">نمای بالا IC</span>
+              </button>
+
+              <button onclick="setMainImage('https://lh3.googleusercontent.com/aida-public/AB6AXuCDd0y3crGG1L5pZBLEZSi9MaC-6ryC6zUiYl5USHrH-NEF3oQ1xDqs_Gl475kH7ZM-PGFPx9wPx5Z1orpxPPidUusXjfdSzEvtVqArMT6JUfNucar38eA4ElPWnkWMHxfdC_e0GcN7N3kjshMTyZFAOZHVmk9Lnt5Geo7J74hveWSSDaL6uWsfmk1FC3qRFfD96J3fnROAmwAqRfvT57YT_99qgFmBWTbkAple9YjC7VFMpks4QRLxFA')" class="bg-surface-container-lowest p-1 rounded-lg shadow-sm hover:bg-primary/5 transition-all text-right group">
+                <div class="w-full h-20 overflow-hidden rounded bg-surface-container flex items-center justify-center">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="پین‌اوت LQFP-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDd0y3crGG1L5pZBLEZSi9MaC-6ryC6zUiYl5USHrH-NEF3oQ1xDqs_Gl475kH7ZM-PGFPx9wPx5Z1orpxPPidUusXjfdSzEvtVqArMT6JUfNucar38eA4ElPWnkWMHxfdC_e0GcN7N3kjshMTyZFAOZHVmk9Lnt5Geo7J74hveWSSDaL6uWsfmk1FC3qRFfD96J3fnROAmwAqRfvT57YT_99qgFmBWTbkAple9YjC7VFMpks4QRLxFA">
+                </div>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary block mt-1 text-center truncate">پین‌اوت LQFP-100</span>
+              </button>
+
+              <button onclick="setMainImage('https://lh3.googleusercontent.com/aida-public/AB6AXuB4HmaRDK77FApUT7PQguc2JKBjSkCDl67bDsAZAsYUNfPad03NEn5JrjWEMRX9Hv5Sonu36QlcAh3wzxoj4L_xXH08VV9J_eR3vH1o9Rd8pkp9Z1xatMdpHwL3uoK5maYASbgQsqGVBLnJy2DBf-3lZlYiHRyqSRtJOHekotBGXd81-JNjNXADDUwJkSi-zFUPrJYFNpFvt7yeYapHZX4g2ShNsC79M0V7rvhvL9hRDM0oS7jW3v_tCw')" class="bg-surface-container-lowest p-1 rounded-lg shadow-sm hover:bg-primary/5 transition-all text-right group">
+                <div class="w-full h-20 overflow-hidden rounded bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="دیاگرام بلوکی" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4HmaRDK77FApUT7PQguc2JKBjSkCDl67bDsAZAsYUNfPad03NEn5JrjWEMRX9Hv5Sonu36QlcAh3wzxoj4L_xXH08VV9J_eR3vH1o9Rd8pkp9Z1xatMdpHwL3uoK5maYASbgQsqGVBLnJy2DBf-3lZlYiHRyqSRtJOHekotBGXd81-JNjNXADDUwJkSi-zFUPrJYFNpFvt7yeYapHZX4g2ShNsC79M0V7rvhvL9hRDM0oS7jW3v_tCw">
+                </div>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary block mt-1 text-center truncate">دیاگرام بلوکی</span>
+              </button>
+
+              <button onclick="setMainImage('https://lh3.googleusercontent.com/aida-public/AB6AXuAzmJ7ZCs8WMOL_XvLOJHvcJ1npCxSAGuJifowI5l_Sl9tVEY9KoSM-EdWAzO4zC4XSMQKX0tcdkJDkDvUu0pnFhQOTblwanIyIMzjecwR1z0DvfbRIBOtBwU9RY-lXDAGb0Lst_XCGPqFxLcmsnRiwfh8UmWYN5XMczaN8gQtS7nb1kwnPa7BQuw49MeKjsqsfO5UFdbce1zW4Xq4Fqf9OdKB2QNkmPTJHnCLNwntQKgrKSa4gzv04Dg')" class="bg-surface-container-lowest p-1 rounded-lg shadow-sm hover:bg-primary/5 transition-all text-right group">
+                <div class="w-full h-20 overflow-hidden rounded bg-surface-container">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="بسته‌بندی رولی کارخانه" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmJ7ZCs8WMOL_XvLOJHvcJ1npCxSAGuJifowI5l_Sl9tVEY9KoSM-EdWAzO4zC4XSMQKX0tcdkJDkDvUu0pnFhQOTblwanIyIMzjecwR1z0DvfbRIBOtBwU9RY-lXDAGb0Lst_XCGPqFxLcmsnRiwfh8UmWYN5XMczaN8gQtS7nb1kwnPa7BQuw49MeKjsqsfO5UFdbce1zW4Xq4Fqf9OdKB2QNkmPTJHnCLNwntQKgrKSa4gzv04Dg">
+                </div>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary block mt-1 text-center truncate">بسته‌بندی رولی کارخانه</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Technical Deep-Dive Section: Tabs System -->
+      <section class="max-w-7xl mx-auto w-full px-gutter-lg py-space-lg">
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+          
+          <!-- Nav Tabs Deck -->
+          <div class="flex items-center bg-surface-container-low px-space-md pt-space-sm overflow-x-auto gap-space-xs">
+            <button class="tab-btn px-space-lg py-space-md rounded-t-lg font-title-md text-title-md flex items-center gap-space-xs transition-colors text-primary bg-surface-container-lowest font-bold" id="tabBtn-specs" onclick="switchTab('specs')">
+              <span class="material-symbols-outlined text-title-md">tune</span>
+              <span>مشخصات فنی</span>
+            </button>
+            <button class="tab-btn px-space-lg py-space-md rounded-t-lg font-title-md text-title-md hover:text-on-surface flex items-center gap-space-xs transition-colors text-secondary bg-transparent font-semibold" id="tabBtn-reviews" onclick="switchTab('reviews')">
+              <span class="material-symbols-outlined text-title-md">forum</span>
+              <span>نظرات</span>
+            </button>
+          </div>
+
+          <!-- Tab Content Area -->
+          <div class="p-space-lg">
+            
+            <!-- TAB 1: Parametric Specifications -->
+            <div class="tab-pane flex-col gap-space-lg flex" id="tabContent-specs">
+              <div class="flex items-center justify-between flex-wrap gap-space-sm">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">جدول مشخصات الکتریکی و معماری STM32F407VGT6</h3>
+                  <p class="text-secondary font-body-sm text-body-sm mt-0.5">مطابق با رفرنس دیتاشیت کمپانی STMicroelectronics Revision 8.0</p>
+                </div>
+                <div class="flex items-center gap-space-xs">
+                  <span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-sm py-1 rounded text-on-surface font-semibold">اصالت: ۱۰۰٪ اورجینال و تست فیزیکی</span>
+                  <span class="bg-surface-container font-label-mono-sm text-label-mono-sm px-space-sm py-1 rounded text-on-surface">RoHS: سازگار و بدون سرب</span>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto rounded-lg shadow-sm ring-1 ring-surface-variant/20">
+                <table class="w-full text-right font-body-md text-body-md border-collapse">
+                  <thead>
+                    <tr class="bg-surface-container-high text-on-surface font-title-md text-title-md">
+                      <th class="p-space-md font-bold w-1/3">مشخصات</th>
+                      <th class="p-space-md font-bold w-1/3">نوع</th>
+                      <th class="p-space-md font-bold w-1/3">&nbsp;توضیحات</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-surface-container">
+                    <tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+                      <td class="p-space-md font-semibold text-on-surface flex items-center gap-2">
+                        <span class="material-symbols-outlined text-body-md text-tertiary">memory</span>
+                        هسته پردازشی (Processor Core)
+                      </td>
+                      <td class="p-space-md font-label-mono-md text-label-mono-md font-bold text-primary">
+                        ARM 32-bit Cortex-M4 CPU with FPU
+                      </td>
+                      <td class="p-space-md text-secondary font-body-sm text-body-sm">
+                        فرکانس ۱۶۸ مگاهرتز، توان پردازشی 210 DMIPS مجهز به شتاب‌دهنده سخت‌افزاری DSP
+                      </td>
+                    </tr>
+                    <tr class="bg-surface-container-low/50 hover:bg-surface-container-low transition-colors">
+                      <td class="p-space-md font-semibold text-on-surface flex items-center gap-2">
+                        <span class="material-symbols-outlined text-body-md text-tertiary">save</span>
+                        حافظه فلش (Flash Memory)
+                      </td>
+                      <td class="p-space-md font-label-mono-md text-label-mono-md font-bold text-on-surface">
+                        ۱ مگابایت (1024 KB)
+                      </td>
+                      <td class="p-space-md text-secondary font-body-sm text-body-sm">
+                        پشتیبانی از حفاظت خواندن و نوشتن (RDP)، قابلیت تحمل ۱۰,۰۰۰ سیکل نوشتن
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- TAB 2: Technical Engineer Reviews -->
+            <div class="tab-pane flex-col gap-space-lg hidden" id="tabContent-reviews">
+              <div class="flex items-center justify-between flex-wrap gap-space-sm">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">نظرات و دیدگاه‌های فنی</h3>
+                  <p class="text-secondary font-body-sm text-body-sm mt-0.5">دیدگاه مهندسان طراح سخت‌افزار و الکترونیک</p>
+                </div>
+                <button class="bg-primary text-on-primary font-title-md text-title-md font-bold px-space-md py-space-sm rounded-lg flex items-center gap-space-xs shadow-sm hover:bg-primary/90 transition-colors">
+                  <span class="material-symbols-outlined text-title-md">rate_review</span>
+                  <span>ثبت دیدگاه</span>
+                </button>
+              </div>
+
+              <div class="flex flex-col gap-space-md">
+                <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-space-sm">
+                      <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface font-label-mono-md">
+                        ه
+                      </div>
+                      <div>
+                        <span class="font-title-md text-body-md font-bold text-on-surface block">مهندس حسینی</span>
+                        <span class="font-label-mono-sm text-label-mono-sm text-secondary">طراح بردهای صنعتی اینورتر</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-amber-500">
+                      <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="material-symbols-outlined text-body-md text-secondary/40">star</span>
+                    </div>
+                  </div>
+                  <p class="text-on-surface font-body-md text-body-md mt-space-xs leading-relaxed text-justify">
+                    یک نکته مهم برای دوستانی که مدار طراحی می‌کنند: حتماً پایه‌های VCAP_1 و VCAP_2 را با خازن ۲.۲ میکروفاراد سرامیکی با مقاومت معادل سری (ESR) پایین زمین کنید. در صورتی که این خازن‌ها به درستی قرار نگیرند هسته پایدار نمی‌شود. قطعه دریافتی از نظر کیفیت پین‌ها و لحیم‌پذیری عالی بود.
+                  </p>
+                  <div class="flex items-center gap-space-md text-body-sm font-body-sm text-secondary pt-1">
+                    <span>۱ ماه پیش</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg">
+    <div class="max-w-7xl mx-auto px-gutter-lg">
+      <div class="grid grid-cols-12 gap-gutter-lg pb-space-xl">
+        
+        <!-- Brand Info -->
+        <div class="col-span-12 lg:col-span-4 flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-sm">
+            <div class="relative flex items-center justify-center p-0.5 rounded-full bg-surface-container-high/10 ring-1 ring-surface-variant/30 shadow-sm">
+              <img alt="MR. DAGHIGH" class="w-10 h-10 rounded-full object-cover filter brightness-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V6X-zWmzhvgEtAloJPkzz3AIcvX6Q2nXzNnPFNoVHheIqcGq-AymnunucW_JqmVDoRsEjaVKkIj1d3kUTLvQ0PLF04AeDMZEG1qU00N3GyTqTE3tK0h8Gjb0QyDt7Vcj99aAKYQJ0ljMTHbpoyxVE66GDvHONy-m5zdqdWeJLB_TSGX8cIAKDGJxBWucz3q6XfyKPy-KU6A2qKVowZ7Psa-QIqOwuSZVPgS_90qahICaK8cvw3Z-IvUQSt">
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-2 leading-none">
+                <span class="font-headline-md text-headline-md font-bold text-inverse-on-surface tracking-tight">مستـر دقیـق</span>
+                <div class="font-label-mono-md text-label-mono-md font-bold px-2 py-0.5 rounded bg-surface-container-high/10 text-inverse-on-surface tracking-wider flex items-center gap-1 shadow-sm ring-1 ring-surface-variant/20">
+                  <span dir="ltr" class="flex items-center gap-0.5">
+                    <span class="text-primary-container font-bold">MR.</span>
+                    <span class="tracking-wider text-inverse-on-surface uppercase">Daghigh</span>
+                  </span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 mt-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm mt-space-xs"></div>
+        </div>
+
+        <!-- Store Logistics -->
+        <div class="col-span-6 lg:col-span-3 flex flex-col gap-space-sm">
+          <h3 class="font-title-md text-title-md font-bold text-inverse-on-surface mb-space-xs">تماس و اطلاعات اداری</h3>
+          <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-secondary-fixed-dim">
+            <div class="flex items-start gap-space-xs">
+              <span class="material-symbols-outlined text-title-md text-primary-container mt-0.5">location_on</span>
+              <span>تهران، لاله زار جنوبی، بن بست اتحادیه (روبروی مسجد)<br>پاساژ اتحادیه، همکف، پلاک 5</span>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-title-md text-primary-container">call</span>
+              <span>تلفن فروشگاه: <span class="font-label-mono-sm text-label-mono-sm text-inverse-on-surface">۰۲۱-۸۸۸۸۴۳۲۱</span></span>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-title-md text-primary-container">mail</span>
+              <span>ایمیل فنی: <span class="font-label-mono-sm text-label-mono-sm text-inverse-on-surface">sales@mrdaghigh.com</span></span>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-title-md text-primary-container">schedule</span>
+              <span>ساعت کاری: شنبه تا چهارشنبه ۹:۰۰ الی ۱۸:۰۰</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Admin -->
+      <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-secondary-fixed-dim border-t border-surface-container-high/10">
+        <p>© کلیه حقوق مادی و معنوی متعلق به وب‌سایت مستر دقیق (<span dir="ltr" class="inline-flex font-semibold text-inverse-on-surface">MR.Daghigh</span>) می‌باشد. تأسیس ۱۳۹۲.</p>
+        <div class="flex items-center gap-gutter font-label-mono-sm text-label-mono-sm mt-space-sm md:mt-0">
+          <a href="admin.html" data-path="admin-login" class="inline-flex items-center gap-1 opacity-40 hover:opacity-100 text-secondary-fixed-dim hover:text-inverse-on-surface text-body-sm transition-opacity duration-300 py-space-xs px-space-xs">
+            <span class="material-symbols-outlined text-body-sm">lock</span>
+            <span>مدیریت</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function setMainImage(src) {
+      const mainImg = document.getElementById('mainProductImg');
+      if (mainImg) {
+        mainImg.src = src;
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      });
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('text-primary', 'bg-surface-container-lowest', 'font-bold');
+        btn.classList.add('text-secondary', 'bg-transparent', 'font-semibold');
+      });
+
+      const targetPane = document.getElementById('tabContent-' + tabId);
+      if (targetPane) {
+        targetPane.classList.remove('hidden');
+        targetPane.classList.add('flex');
+      }
+
+      const targetBtn = document.getElementById('tabBtn-' + tabId);
+      if (targetBtn) {
+        targetBtn.classList.add('text-primary', 'bg-surface-container-lowest', 'font-bold');
+        targetBtn.classList.remove('text-secondary', 'bg-transparent', 'font-semibold');
+      }
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

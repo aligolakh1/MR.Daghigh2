@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>قطعات و تجهیزات صنعتی | مستر دقیق (MR. Daghigh)</title>
+  <meta name="description" content="کاتالوگ تخصصی قطعات الکترونیک، میکروکنترلرها، سنسورهای صنعتی، ماژول‌های تغذیه و ابزار دقیق در مستر دقیق بازار لاله زار تهران">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ff6b1a",
+            "on-primary": "#ffffff",
+            "primary-container": "#ff8c42",
+            "on-primary-container": "#2c1202",
+            "secondary": "#576575",
+            "on-secondary": "#ffffff",
+            "surface": "#f5f6fa",
+            "on-surface": "#213145",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#edf0f7",
+            "surface-container": "#e2e6f0",
+            "surface-container-high": "#d4dbe8",
+            "inverse-surface": "#121d2b",
+            "inverse-on-surface": "#e5ecf6",
+            "outline-variant": "#cbd3e1",
+            "tertiary": "#00b4d8",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            "body": ["Vazirmatn", "IBM Plex Sans", "sans-serif"],
+            "headline": ["Vazirmatn", "Space Grotesk", "sans-serif"],
+            "mono": ["IBM Plex Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col">
+
+  <!-- Fixed Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface shadow-sm">
+    <!-- Top info bar -->
+    <div class="bg-inverse-surface text-inverse-on-surface text-xs py-1.5 px-4 border-b border-white/10 hidden md:block">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">store</span> انبار مرکزی: لاله زار جنوبی تهران</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-primary">verified</span> تضمین اصالت پارت‌نامبرهای صنعتی</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:02188884321" class="hover:text-primary transition-colors flex items-center gap-1 font-mono">
+            <span class="material-symbols-outlined text-xs">call</span> ۰۲۱-۸۸۸۸۴۳۲۱
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img alt="MR. DAGHIGH Logo" class="w-10 h-10 rounded-full object-cover shadow-sm ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1V6X-zWmzhvgEtAloJPkzz3AIcvX6Q2nXzNnPFNoVHheIqcGq-AymnunucW_JqmVDoRsEjaVKkIj1d3kUTLvQ0PLF04AeDMZEG1qU00N3GyTqTE3tK0h8Gjb0QyDt7Vcj99aAKYQJ0ljMTHbpoyxVE66GDvHONy-m5zdqdWeJLB_TSGX8cIAKDGJxBWucz3q6XfyKPy-KU6A2qKVowZ7Psa-QIqOwuSZVPgS_90qahICaK8cvw3Z-IvUQSt">
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="font-bold text-lg text-on-surface">مستـر دقیـق</span>
+            <span class="text-xs px-1.5 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-mono font-bold">MR.Daghigh</span>
+          </div>
+          <span class="text-[11px] text-secondary">مرجع تأمین قطعات الکترونیک صنعتی</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="flex-1 max-w-2xl hidden md:block">
+        <div class="flex items-center bg-surface-container-low rounded-lg p-1 border border-surface-container">
+          <div class="px-3 py-1.5 flex items-center gap-1 text-secondary text-xs bg-surface rounded">
+            <span class="material-symbols-outlined text-sm">tune</span>
+            <span>کاتالوگ قطعات</span>
+          </div>
+          <div class="flex-1 flex items-center px-3">
+            <span class="material-symbols-outlined text-secondary text-base ml-2">search</span>
+            <input id="catalogSearchInput" oninput="filterCatalog()" class="w-full bg-transparent outline-none text-xs text-on-surface placeholder:text-secondary text-right" dir="rtl" placeholder="جستجوی نام قطعه، سنسور یا پارت‌نامبر..." type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Account button: Open Auth Modal, NEVER navigate to contact -->
+        <a class="flex items-center gap-2 text-on-surface hover:text-primary transition-colors py-1.5 px-3 rounded-lg hover:bg-surface-container-low cursor-pointer" data-path="login" href="javascript:void(0)" onclick="openAuthModal('login'); return false;">
+          <span class="material-symbols-outlined text-2xl text-secondary">account_circle</span>
+          <div class="flex flex-col text-right">
+            <span class="text-[11px] text-secondary">حساب کاربری</span>
+            <span class="text-xs font-bold text-on-surface">ورود / عضویت</span>
+          </div>
+        </a>
+
+        <!-- Fast Inquiry -->
+        <button onclick="openInquiryModal('استعلام قطعات صنعتی')" class="flex items-center gap-2 bg-primary-container text-on-primary-container px-3.5 py-2 rounded-lg hover:bg-primary hover:text-white transition-all shadow-sm cursor-pointer">
+          <span class="material-symbols-outlined text-xl">support_agent</span>
+          <div class="flex flex-col text-right">
+            <span class="text-[10px] leading-none">استعلام فوری</span>
+            <span class="text-xs font-bold leading-none mt-1">تماس با کارشناس</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="h-12 bg-surface-container-low border-t border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+        <div class="flex items-center h-full gap-6">
+          <div class="relative group h-full flex items-center">
+            <a href="products.html" class="bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2">
+              <span class="material-symbols-outlined text-sm text-primary">menu_open</span>
+              <span>دسته‌بندی تخصصی قطعات</span>
+            </a>
+          </div>
+
+          <!-- Clean Navigation: strictly home, products, contact -->
+          <nav class="flex items-center gap-6 text-xs">
+            <a class="text-secondary hover:text-on-surface transition-colors" data-path="home" href="index.html">صفحه اصلی</a>
+            <a aria-current="page" class="transition-colors text-primary font-bold" data-path="products" href="products.html">قطعات</a>
+            <a class="text-secondary hover:text-on-surface transition-colors" data-path="contact" href="contact.html">تماس با پشتیبانی</a>
+          </nav>
+        </div>
+
+        <div class="hidden md:flex items-center gap-2 text-secondary text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>سیستم انبار و استعلام: فعال و آنلاین</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-36 pb-16 flex-1">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col gap-6">
+      
+      <!-- Breadcrumb & Title -->
+      <div class="flex flex-col gap-1 mt-4">
+        <div class="flex items-center gap-2 text-xs text-secondary">
+          <a href="index.html" class="hover:text-primary transition-colors">مستر دقیق</a>
+          <span>/</span>
+          <span class="text-on-surface font-bold">کاتالوگ تخصصی قطعات</span>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-2">
+          <div>
+            <h1 class="text-2xl font-bold text-on-surface">قطعات صنعتی، میکروکنترلرها و ابزار دقیق</h1>
+            <p class="text-xs text-secondary mt-1">تأمین مستقیم از انبار لاله زار تهران همراه با تضمین اصالت کالا و برگه تست</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="orderViaTelegram('استعلام سبد قطعات صنعتی')" class="px-3.5 py-2 bg-[#2AABEE] text-white text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity">
+              <span class="material-symbols-outlined text-sm">send</span>
+              <span>ارسال لیست استعلام به تلگرام</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 border-b border-surface-container text-xs">
+        <button onclick="setCategoryFilter('all', this)" class="category-btn active-tab px-4 py-2 rounded-lg font-bold bg-primary text-white transition-all">
+          همه قطعات
+        </button>
+        <button onclick="setCategoryFilter('microcontrollers', this)" class="category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all">
+          میکروکنترلر و IC
+        </button>
+        <button onclick="setCategoryFilter('sensors', this)" class="category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all">
+          سنسورهای صنعتی
+        </button>
+        <button onclick="setCategoryFilter('soldering', this)" class="category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all">
+          تجهیزات لحیم‌کاری
+        </button>
+        <button onclick="setCategoryFilter('power', this)" class="category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all">
+          ماژول‌های قدرت و تغذیه
+        </button>
+        <button onclick="setCategoryFilter('measurement', this)" class="category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all">
+          ابزار اندازه‌گیری
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productsCatalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Products will be populated dynamically -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-inverse-surface text-inverse-on-surface pt-12 pb-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">مستر دقیق (MR. Daghigh)</span>
+          </div>
+          <p class="text-xs text-secondary leading-relaxed">
+            مرکز تخصصی تأمین قطعات الکترونیک صنعتی، ماژول‌های ابزار دقیق و میکروکنترلرهای کاربردی با سابقه تأمین برای بیش از ۳۰۰ کارخانه و مجموعه صنعتی در سراسر کشور.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 text-xs">
+          <span class="font-bold text-sm mb-1 text-white">دسترسی سریع</span>
+          <a href="index.html" class="text-secondary hover:text-white transition-colors">صفحه اصلی</a>
+          <a href="products.html" class="text-secondary hover:text-white transition-colors">کاتالوگ قطعات</a>
+          <a href="contact.html" class="text-secondary hover:text-white transition-colors">تماس با پشتیبانی و استعلام پیش‌فاکتور</a>
+          <a href="admin.html" class="text-secondary hover:text-white transition-colors">پنل مدیریت انبار و کاربران</a>
+        </div>
+        <div class="flex flex-col gap-2 text-xs text-secondary">
+          <span class="font-bold text-sm mb-1 text-white">اطلاعات تماس</span>
+          <span>تهران، لاله زار جنوبی، بن بست اتحادیه، پاساژ اتحادیه، همکف، پلاک ۵</span>
+          <span class="font-mono">تلفن: ۰۲۱-۸۸۸۸۴۳۲۱</span>
+          <span class="font-mono">تلگرام: @mrdaghigh_sales</span>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between text-xs text-secondary">
+        <span>© کلیه حقوق متعلق به فروشگاه مهندسی مستر دقیق می‌باشد.</span>
+        <a href="admin.html" class="text-secondary hover:text-white mt-2 md:mt-0">ورود مدیریت</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    let currentCategory = 'all';
+
+    function renderCatalog() {
+      const container = document.getElementById('productsCatalogGrid');
+      if (!container) return;
+
+      const searchVal = (document.getElementById('catalogSearchInput')?.value || '').trim().toLowerCase();
+      
+      const filtered = PRODUCTS_DATA.filter(p => {
+        const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchesSearch = !searchVal || 
+          p.name.toLowerCase().includes(searchVal) || 
+          p.persianTitle.toLowerCase().includes(searchVal) || 
+          p.desc.toLowerCase().includes(searchVal);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center flex flex-col items-center justify-center gap-3">
+            <span class="material-symbols-outlined text-4xl text-secondary">inventory_2</span>
+            <span class="text-sm font-bold text-on-surface">قطعه‌ای مطابق با عبارت مورد نظر یافت نشد</span>
+            <span class="text-xs text-secondary">جهت استعلام موجودی انبارهای لاله زار لطفاً با واحد مهندسی تماس بگیرید.</span>
+            <button onclick="openInquiryModal('استعلام قطعه ناموجود')" class="mt-2 px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg">
+              استعلام دستی پارت‌نامبر
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => `
+        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm border border-surface-container flex flex-col justify-between hover:shadow-md transition-all group" data-product-name="${item.name}">
+          <div>
+            <a href="${item.url}" class="block">
+              <div class="relative w-full h-44 rounded-lg bg-surface-container-low flex items-center justify-center overflow-hidden mb-3">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="${item.name}" src="${item.image}">
+                <span class="absolute top-2 right-2 bg-inverse-surface/80 text-inverse-on-surface text-[10px] px-2 py-0.5 rounded font-mono">
+                  ${item.tag}
+                </span>
+              </div>
+              <div class="flex items-center justify-between text-xs mb-1">
+                <span class="text-primary font-bold font-mono">${item.name}</span>
+                <span class="text-secondary font-mono">${item.stock}</span>
+              </div>
+              <h3 class="font-bold text-sm text-on-surface mb-1 line-clamp-1 group-hover:text-primary transition-colors">
+                ${item.persianTitle}
+              </h3>
+              <p class="text-xs text-secondary line-clamp-2 leading-relaxed mb-3">
+                ${item.desc}
+              </p>
+            </a>
+          </div>
+
+          <div class="pt-3 border-t border-surface-container flex flex-col gap-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="font-bold text-primary">استعلام قیمت روز</span>
+              <span class="text-secondary flex items-center gap-1 text-[11px]">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> انبار لاله زار
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-1">
+              <a href="${item.url}" class="py-2 text-center text-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface font-bold rounded-lg transition-colors">
+                مشخصات فنی
+              </a>
+              <button onclick="orderViaTelegram('${item.name}')" class="py-2 text-center text-xs bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-sm">send</span>
+                <span>استعلام</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function setCategoryFilter(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.className = 'category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all';
+      });
+      btn.className = 'category-btn active-tab px-4 py-2 rounded-lg font-bold bg-primary text-white transition-all';
+      renderCatalog();
+    }
+
+    function filterCatalog() {
+      renderCatalog();
+    }
+
+    // Check URL params for category on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat');
+      if (catParam) {
+        currentCategory = catParam;
+        const targetBtn = document.querySelector(`.category-btn[onclick*="${catParam}"]`);
+        if (targetBtn) {
+          document.querySelectorAll('.category-btn').forEach(b => {
+            b.className = 'category-btn px-4 py-2 rounded-lg font-bold bg-surface-container-low text-secondary hover:text-on-surface transition-all';
+          });
+          targetBtn.className = 'category-btn active-tab px-4 py-2 rounded-lg font-bold bg-primary text-white transition-all';
+        }
+      }
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>
